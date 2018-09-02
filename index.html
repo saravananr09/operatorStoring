@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       <div class="flex-container">
+        <h1 class="box">Customer Detail's</h1>
+    </div>
+
+        <div class="content">
+
+            <form id="add-cafe-form">
+                <input type="text" name="Name" placeholder="Enter your Name">
+                <input type="text" name="number" placeholder="Enter your Number">
+                <input type="text" name="operator" placeholder="Enter your Operator">
+                <button>Add detail</button>
+            </form>
+
+            <ul id="user-list"></ul>
+
+        </div>
+        
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDCAKyu2tPcRs3lE2WhJBZtFmNbst33OIQ",
+    authDomain: "sara-firsfirestore.firebaseapp.com",
+    databaseURL: "https://sara-firsfirestore.firebaseio.com",
+    projectId: "sara-firsfirestore",
+    storageBucket: "sara-firsfirestore.appspot.com",
+    messagingSenderId: "689003188138"
+  };
+  firebase.initializeApp(config);
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+</script>
+        <script src="app.js"></script>
+    </body>
+</html>
